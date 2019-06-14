@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1><center>The Result of Search:</center></h1>
+    <h3>Count:<font color="blue">{{ lenght }}</font></h3>
+         {% for range in range_list %}
+             <h3>  In the range {{ range }}</h3>
+         {% endfor %}
+
+         {% for row in rows %}
+             <h3>  there are {{ row }} quakes</h3>
+         {% endfor %}
+
+
+
+    <br>
+    <h2> <a href = "/">Home</a> </h2>
+</body>
+</html>
+

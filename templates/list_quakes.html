@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quakes</title>
+</head>
+<body>
+    <h1>Top 100 quakes in the database: </h1>
+    <table border = 1>
+         <thead>
+            <td>time</td>
+            <td>latitude</td>
+            <td>longitude</td>
+            <td>depth</td>
+            <td>mag</td>
+            <td>rms</td>
+            <td>place</td>
+         </thead>
+
+         {% for i in range(100) %}
+         <tr>
+            <td>{{rows[i][0]}}</td>
+            <td>{{rows[i][1]}}</td>
+            <td>{{rows[i][2]}}</td>
+            <td>{{rows[i][3]}}</td>
+            <td>{{rows[i][4]}}</td>
+            <td>{{rows[i][5]}}</td>
+            <td>{{rows[i][6]}}</td>
+         </tr>
+         {% endfor %}
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz 2</title>
+</head>
+<body style="text-align: center;">
+
+    <h1>Quiz 2</h1>
+    <h2>Li, Xinsheng</h2>
+    <h2>1730</h2>
+    <h1>Check Top 100 Quake Data:</h1>
+    <h2><a href = "/DataList">Data Details</a></h2>
+
+    <HR style="opacity:100; style:2" width="80%" color=#272f70 SIZE=10>
+    <h3>Part 5: Total number quakes and the smallest quake over 2. </h3>
+    <form action="/searchMag" enctype='multipart/form-data' method='POST'>
+            <label>Input The MSG Value Into Textbox:</label><br><br>
+            <input type="text" name="mag" id="mag" >
+            <input type="submit" value="Submit">
+    </form><br>
+
+    <HR style="opacity:100; style:2" width="80%" color=#272f70 SIZE=10>
+    <h3>Part 6: show the number of quakes between those depth values in increments given</h3>
+    <form action="/search_between_mag" enctype='multipart/form-data' method='POST'>
+        <label>Input The MAG Range:</label>
+        <input type="text" name="front_mag" id="front_mag" placeholder="input min_mag level">----<input type="text" name="rear_mag" id="rear_mag" placeholder="input max_mag level">
+        <input type="text" name="increment" id="increment" placeholder="increment">
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <HR style="opacity:100; style:2" width="80%" color=#272f70 SIZE=10>
+    <h3> Part 7: every earthquake in that area (box).</h3>
+    <form action="/searchSpeLoc" enctype='multipart/form-data' method='POST'>
+        <label>Input The first Location:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="longitude1" id="longitude1" placeholder="input longitude">
+        <input type="text" name="latitude1" id="latitude1" placeholder="input latitude">
+        <br>
+        <br>
+        <label>Input The second Location:</label>&nbsp;&nbsp;
+        <input type="text" name="longitude2" id="longitude2" placeholder="input longitude">
+        <input type="text" name="latitude2" id="latitude2" placeholder="input latitude">
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <HR style="opacity:100; style:2" width="80%" color=#272f70 SIZE=10>
+    <h3> Part 8: modify all earthquakes within that range, to contain a mag of "999". </h3>
+    <form action="/searchMagDate" enctype='multipart/form-data' method='POST'>
+        <label>Input The MAG Range:</label>
+        <input type="text" name="magMin" id="magMin" placeholder="input min_mag level">----<input type="text" name="magMax" id="magMax" placeholder="input max_mag level">
+        <br><br><label>Select The Date Range:</label>
+        <input type="date" name="startTime" id="startTime">
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <HR style="opacity:100; style:2" width="80%" color=#272f70 SIZE=10>
+    <h3>Part 9: find all quakes within that distance of the location.</h3>
+    <form action="/search9" enctype='multipart/form-data' method='POST'>
+        <label>Input The Location:like(-97,36)</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="longitude" id="longitude" placeholder="input longitude">
+        <input type="text" name="latitude" id="latitude" placeholder="input latitude">
+        <br><br><label>Input The Distance:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="distance" id="distance" placeholder="input distance">&nbsp;&nbsp;KM
+        <input type="submit"   value="Submit">
+
+    <HR style="opacity:100; style:2" width="80%" color=#272f70 SIZE=10>
+    <h3>Find clusters of earthquakes</h3>
+    <form action="/clusters" enctype='multipart/form-data' method='POST'>
+        <label>Input Number:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="Num" id="Num" placeholder="input the number">
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <HR style="opacity:100; style:2" width="80%" color=#272f70 SIZE=10>
+    <h3>Do large (>4.0 mag) occur more often at night?</h3>
+    <form action="/searchPro" enctype='multipart/form-data' method='POST'>
+        <label>Input The Mag Level:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="MagLevel" id="MagLevel" placeholder="input the mag level">
+        <input type="submit" value="Submit">
+    </form><br>
+
+    <br>
+
+
+        <h2> <a href = "/">Home</a> </h2>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1><center>Part 6: show the number of quakes between those depth values in increments given</center></h1>
+    <h3><center>Li, Xinsheng</center></h3>
+    <h3><center>1730</center></h3>
+        {% for row in rows %}
+            <h3> In range {{ row[0] }}</h3>
+            <table border = 1>
+             <thead>
+                <td>time</td>
+                <td>latitude</td>
+                <td>longitude</td>
+                <td>depth</td>
+                <td>mag</td>
+                <td>rms</td>
+                <td>place</td>
+             </thead>
+             {% for r in row[1] %}
+             <tr>
+                <td>{{r[0]}}</td>
+                <td>{{r[1]}}</td>
+                <td>{{r[2]}}</td>
+                <td>{{r[3]}}</td>
+                <td>{{r[4]}}></td>
+                <td>{{r[5]}}</td>
+                <td>{{r[6]}}</td>
+             </tr>
+             {% endfor %}
+            </table>
+        {% endfor %}
+</body>
+</html>

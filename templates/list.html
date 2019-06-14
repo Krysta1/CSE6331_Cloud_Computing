@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+   <body>
+      <header> <h1> This page lists the Student records </h1>
+          <h2> Li, Xinsheng </h2>
+        <h2> 1730 </h2>
+      </header>
+      <br> <br>
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Points</td>
+            <td>State</td>
+            <td>Room</td>
+            <td>Picture</td>
+            <td>Pictures</td>
+            <td>Favorites</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td> <img src="static/{{row[4]}}" height="100px" width="100px"></td>
+             <td>{{ row[5] }}</td>
+            <!-- <td>{{row['Keywords']}}</td> -->
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>

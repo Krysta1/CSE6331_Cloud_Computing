@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1><center>The Result of Search:</center></h1>
+    <h3>MAG Level:<font color="red">{{ magLevel }}</font></h3>
+    <h3>Earthquake Happen Number:<font color="red">{{ tolHappen }}</font></h3>
+    <h3>In Night(18:00-05:59):<font color="red">{{ nightHappen }}</font></h3>
+    <h3>In Morning(06:00-17:59):<font color="red">{{ morningHappen }}</font></h3>
+    <h3>Often occurs Earthquake at:<font color="red">{{ timeHappen }}</font></h3>
+    <h2><center>Night List:</center></h2>
+        <table border = 1>
+         <thead>
+            <td>time</td>
+            <td>latitude</td>
+            <td>longitude</td>
+            <td>depth</td>
+            <td>mag</td>
+            <td>magType</td>
+            <td>nst</td>
+            <td>gap</td>
+            <td>dmin</td>
+            <td>rms</td>
+            <td>net</td>
+            <td>Qid</td>
+            <td>updated</td>
+            <td>place</td>
+            <td>type</td>
+            <td>horizontalError</td>
+            <td>depthError</td>
+            <td>magError</td>
+            <td>magNst</td>
+            <td>status</td>
+            <td>locationSource</td>
+            <td>magSource</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <td>{{row[7]}}</td>
+            <td>{{row[8]}}</td>
+            <td>{{row[9]}}</td>
+            <td>{{row[10]}}</td>
+            <td>{{row[11]}}</td>
+            <td>{{row[12]}}</td>
+            <td>{{row[13]}}</td>
+            <td>{{row[14]}}</td>
+            <td>{{row[15]}}</td>
+            <td>{{row[16]}}</td>
+            <td>{{row[17]}}</td>
+            <td>{{row[18]}}</td>
+            <td>{{row[19]}}</td>
+            <td>{{row[20]}}</td>
+            <td>{{row[21]}}</td>
+         </tr>
+         {% endfor %}
+    </table><br><br>
+    <h2><center>Morning List:</center></h2>
+        <table border = 1>
+         <thead>
+            <td>time</td>
+            <td>latitude</td>
+            <td>longitude</td>
+            <td>depth</td>
+            <td>mag</td>
+            <td>magType</td>
+            <td>nst</td>
+            <td>gap</td>
+            <td>dmin</td>
+            <td>rms</td>
+            <td>net</td>
+            <td>Qid</td>
+            <td>updated</td>
+            <td>place</td>
+            <td>type</td>
+            <td>horizontalError</td>
+            <td>depthError</td>
+            <td>magError</td>
+            <td>magNst</td>
+            <td>status</td>
+            <td>locationSource</td>
+            <td>magSource</td>
+         </thead>
+
+         {% for row in rows2 %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <td>{{row[7]}}</td>
+            <td>{{row[8]}}</td>
+            <td>{{row[9]}}</td>
+            <td>{{row[10]}}</td>
+            <td>{{row[11]}}</td>
+            <td>{{row[12]}}</td>
+            <td>{{row[13]}}</td>
+            <td>{{row[14]}}</td>
+            <td>{{row[15]}}</td>
+            <td>{{row[16]}}</td>
+            <td>{{row[17]}}</td>
+            <td>{{row[18]}}</td>
+            <td>{{row[19]}}</td>
+            <td>{{row[20]}}</td>
+            <td>{{row[21]}}</td>
+         </tr>
+         {% endfor %}
+    </table>
+    <br>
+    <h2> <a href = "/">Home</a> </h2>
+</body>
+</html>

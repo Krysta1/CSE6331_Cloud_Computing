@@ -1,0 +1,4 @@
+applications:
+- name: MyFirstApp-001
+  random-route: true
+  memory: 64M

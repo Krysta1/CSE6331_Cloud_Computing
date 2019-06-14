@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+   <body>
+      <header> <h1> Photos: </h1>
+          <h2> Li, Xinsheng </h2>
+        <h2> 1730 </h2>
+      </header>
+      <br> <br>
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Size</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>

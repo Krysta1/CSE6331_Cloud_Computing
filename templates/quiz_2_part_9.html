@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <header> <h1> Part 9: find all quakes within that distance of the location. </h1> </header>
+		<br> <br>
+		<h2> <center><font size="4" color="black">Li, Xinsheng</font></center></h2>
+        <h2> <center><font size="4" color="black">1730</font></center></h2>
+    <title>resultOfMag</title>
+</head>
+<body>
+    <h1><center>The Result :</center></h1>
+
+    <h3>Count:<font color="blue">{{ count }}</font></h3>
+    <h3>List:</h3>
+        <table border = 1>
+         <thead>
+            <td>time</td>
+            <td>latitude</td>
+            <td>longitude</td>
+            <td>depth</td>
+            <td>mag</td>
+            <td>rms</td>
+            <td>place</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+
+         </tr>
+         {% endfor %}
+    </table>
+
+    <br>
+    <h2> <a href = "/">Home</a> </h2>
+</body>
+</html>

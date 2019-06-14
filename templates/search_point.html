@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+   <body>
+      <header> <h1> Search point {{point}} results: </h1>
+          <h2> Li, Xinsheng </h2>
+        <h2> 1730 </h2>
+      </header>
+      <br> <br>
+      <table border = 1>
+         <thead>
+            <td>Name</td>
+            <td>Picture</td>
+            <td>Favorite</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td> <img src="static/{{row[1]}}" height="100px" width="100px"></td>
+            <td>{{row[2]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>

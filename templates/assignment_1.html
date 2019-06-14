@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz 2</title>
+</head>
+<body>
+<center>
+    <header><h1> Quiz 1 </h1></header>
+    <h2> Li, Xinsheng </h2>
+    <h2> 1730 </h2>
+    <br>
+    <h2><a href="/list">Retrive People Details</a></h2>
+    <h2><a href="/show">Show Pictures in Storage</a></h2>
+
+    <form action="/search_point" enctype='multipart/form-data' method='POST'>
+        <label>Input Point</label>
+        <input type="text" name="point" id="point">
+        <input type="submit" onclick="" value="go">
+    </form>
+    <br>
+    <br>
+    <br>
+    <form action="/search_range" enctype='multipart/form-data' method='POST'>
+        <label>Input Range</label>
+        <input type="text" name="front" id="front">
+        <input type="text" name="rear" id="rear">
+        <input type="text" name="fav" id="fav">
+        <input type="submit" onclick="" value="go">
+    </form>
+    <br>
+    <br>
+    <br>
+    <form action="/search_and_modify" enctype='multipart/form-data' method='POST'>
+        <label>Give a point number</label>
+        <input type="text" name="search_point" id="search_point">
+        <input type="text" name="new_name" id="new_name">
+        <input type="submit" onclick="" value="go">
+    </form>
+</center>
+
+</body>
+</html>
